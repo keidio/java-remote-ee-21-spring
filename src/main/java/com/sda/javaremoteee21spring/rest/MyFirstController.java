@@ -1,6 +1,7 @@
 package com.sda.javaremoteee21spring.rest;
 
 import com.sda.javaremoteee21spring.dto.Person;
+import com.sda.javaremoteee21spring.service.MyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,13 @@ import java.util.List;
 @RequestMapping("/api")
 @Slf4j
 public class MyFirstController {
+
+    private final MyService service;
+
+    public MyFirstController(MyService service) {
+        log.info("MyFirstController constructor");
+        this.service = service;
+    }
 
 
     //SLf4j, same as:
