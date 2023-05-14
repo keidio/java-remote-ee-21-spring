@@ -46,4 +46,9 @@ public class CarRepository {
                         .build()
         );
     }
+
+    public List<Car> findAll() {
+        log.info("find all cars");
+        return cars;
+    }
 }
