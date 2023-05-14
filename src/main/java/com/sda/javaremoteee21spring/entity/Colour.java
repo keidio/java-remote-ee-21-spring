@@ -1,7 +1,9 @@
 package com.sda.javaremoteee21spring.entity;
 
 public enum Colour {
-    //TODO: add values
-
-    SOUL_RED
+    SOUL_RED,
+    COSMIC_WHITE,
+    ELECTRIC_BLUE,
+    MIDNIGH_BLACK,
+    SPACE_GRAY
 }
