@@ -1,4 +1,4 @@
-package com.sda.javaremoteee21spring.rest;
+package com.sda.javaremoteee21spring.controller.rest;
 
 import com.sda.javaremoteee21spring.dto.Person;
 import com.sda.javaremoteee21spring.service.MyService;
@@ -70,6 +70,14 @@ public class MyFirstController {
       return ResponseEntity.ok("Success");
 
     }
+
+    @GetMapping("/secret")
+    public String getOneSecret() {
+        String secretToShare = service.shareOneSecret();
+        log.info("Sharing [{}] secret with user", secretToShare);
+        return secretToShare;
+    }
+
 }
 
     /*@GetMapping("/try-login")
