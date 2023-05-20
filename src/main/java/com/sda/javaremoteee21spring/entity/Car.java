@@ -17,7 +17,7 @@ public class Car {
     String model;
     String vin;
     Colour colour;
-    YearMonth productionYeaMonth;
+    YearMonth productionYearMonth;
     int mileage;
     Fuel fuelType;
     boolean insurance;

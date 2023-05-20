@@ -19,6 +19,13 @@ public class CarService {
         this.carRepository = carRepository;
     }
 
+    public Car saveCar(Car carToSave) {
+        log.info("Saving object: [{}]", carToSave);
+        Car savedCar = carRepository.save(carToSave);
+        log.info("Car with assigned id: [{}]", savedCar);
+        return savedCar;
+    }
+
     public List<Car> findAllCars() {
         //List<Car> carsFromRepository = carRepository.findAll();
         var carsFromRepository = carRepository.findAll();

@@ -19,7 +19,7 @@ class CarTest {
                 .model("6")
                 .vin("123456")
                 .colour(Colour.SOUL_RED)
-                .productionYeaMonth(YearMonth.now())
+                .productionYearMonth(YearMonth.now())
                 .mileage(100)
                 .fuelType(Fuel.GASOLINE)
                 .insurance(true)

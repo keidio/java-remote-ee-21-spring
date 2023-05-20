@@ -32,7 +32,7 @@ public class CarRepository {
                         .model("6")
                         .vin("123456")
                         .colour(Colour.SOUL_RED)
-                        .productionYeaMonth(YearMonth.now())
+                        .productionYearMonth(YearMonth.now())
                         .mileage(100)
                         .fuelType(Fuel.GASOLINE)
                         .insurance(true)
@@ -43,7 +43,7 @@ public class CarRepository {
                         .model("5")
                         .vin("aBCD123")
                         .colour(Colour.ELECTRIC_BLUE)
-                        .productionYeaMonth(YearMonth.now())
+                        .productionYearMonth(YearMonth.now())
                         .mileage(100)
                         .fuelType(Fuel.GASOLINE)
                         .insurance(false)
@@ -59,5 +59,12 @@ public class CarRepository {
     public Car findById(Long id) {
         log.info("finding car by id: [{}]", id);
         return cars.get(id);
+    }
+
+    public Car save(Car carToSave) {
+        log.info("Saving car: [{}]", carToSave);
+        // TODO - fix this
+        carToSave.setId(3L);
+        return carToSave;
     }
 }
