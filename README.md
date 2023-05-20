@@ -11,9 +11,9 @@
 - Controller
 - Model (data + operations on data) = Service + Repository
 
-- Controller ->
-- Service ->
-- Repository
+- Controller -> get the request from the user and returns the view
+- Service -> business logic (what application should do)
+- Repository -> direct access to the data (doesn't matter where data is)
 
 ### View - it's a view which user is  able to play with
 - html pages
