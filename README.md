@@ -39,3 +39,5 @@
  - get one car(url + http verb): GET /cars/{id} e.g. /cars/1024
  - create new car (url + http verb): POST /cars 
  - delete car (url + Http verb): DELETE /cars/{id}
+ - update car (replace) (url + Http verb): PUT /cars/{id}
+ - update car (partial) (url + Http verb): PATCH /cars/{id}
