@@ -63,7 +63,6 @@ public class CarRepository {
 
     public Car save(Car carToSave) {
         log.info("Saving car: [{}]", carToSave);
-        // TODO - fix this
         //find next id
         Long id = nextId();
         carToSave.setId(id);
