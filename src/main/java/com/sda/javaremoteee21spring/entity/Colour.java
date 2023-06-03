@@ -4,6 +4,6 @@ public enum Colour {
     SOUL_RED,
     COSMIC_WHITE,
     ELECTRIC_BLUE,
-    MIDNIGH_BLACK,
+    MIDNIGHT_BLACK,
     SPACE_GRAY
 }
