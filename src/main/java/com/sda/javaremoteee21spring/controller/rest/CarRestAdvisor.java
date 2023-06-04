@@ -21,7 +21,9 @@ public class CarRestAdvisor {
 
         String currentRequestPath= ServletUriComponentsBuilder.fromCurrentRequest()
                 .build()
+                //.toUriString()
                 .getPath();
+
 
         return ErrorResponse.builder()
                 .timestamp(LocalDateTime.now())
