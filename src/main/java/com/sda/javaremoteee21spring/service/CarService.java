@@ -60,9 +60,8 @@ public class CarService {
 
     public Car findCarById(Long id) {
         log.info("trying to find car with id: [{}]", id);
-        springCarRepository.findById(id)
+        return springCarRepository.findById(id)
                 .orElseThrow(() -> new CarNotFoundException("No car with id: " + id));
-        return null;
     }
 
 
