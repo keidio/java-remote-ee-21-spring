@@ -13,7 +13,7 @@ import java.time.YearMonth;
 @Builder //builder don't need no-args constructor
 public class Car {
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     String brand;
