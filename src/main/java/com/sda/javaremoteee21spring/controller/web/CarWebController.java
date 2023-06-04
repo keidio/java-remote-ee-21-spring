@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/web")
 public class CarWebController {
 
+    private static final String CARS = "cars";
+    private static final String NAME = "name";
+    private static final String SURNAME = "surname";
     private final CarService carService;
 
     public CarWebController(CarService carService) {
@@ -21,12 +24,12 @@ public class CarWebController {
 
     @GetMapping({"/home-page", ""})
     public String homePage(Model data,
-                           @RequestParam(value = "name", defaultValue = "Keidi") String name,
-                           @RequestParam(value = "surname", defaultValue = "O.") String surname){
+                           @RequestParam(value = NAME, defaultValue = "Keidi") String name,
+                           @RequestParam(value = SURNAME, defaultValue = "O.") String surname){
         log.info("Home page");
 
-        data.addAttribute("name", name);
-        data.addAttribute("surname", surname);
+        data.addAttribute(NAME, name);
+        data.addAttribute(SURNAME, surname);
         return "home-page";
     }
 
@@ -35,7 +38,7 @@ public class CarWebController {
         log.info("All cars at html page");
 
         var allCars= carService.findAllCars();
-        data.addAttribute("cars", allCars);
+        data.addAttribute(CARS, allCars);
         return "all-cars";
     }
 }
