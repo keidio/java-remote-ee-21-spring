@@ -33,10 +33,12 @@
         <td th:text="${car.mileage}">10000</td>
         <td th:text="${car.fuelType}">GASOLINE</td>
         <td th:text="${car.insurance}">true</td>
-        <<td><a th:href="@{'/web/cars/delete/' + ${car.id}}" href="#">delete</a></td>
+        <td><a th:href="@{'/web/cars/delete/' + ${car.id}}" href="#">delete</a></td>
 
     </tr>
     </tbody>
 </table>
+    <br>
+<p>Let's create <a th:href="@{/web/cars/show-add-form}" href="new-car.html">car</a></p>
 </body>
 </html>
