@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.time.LocalDateTime;
-@RestControllerAdvice
+@RestControllerAdvice("com.sda.javaremoteee21spring.controller.rest")
 public class CarRestAdvisor {
 
     @ExceptionHandler(CarNotFoundException.class)
